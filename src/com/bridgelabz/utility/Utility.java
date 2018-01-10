@@ -1,5 +1,5 @@
 /**
- * discription:Algoirthm Program  
+s * discription:Algoirthm Program  
  * Date:06/01/2018  8:30
  * Author:Anil Rajes Patil 
  * 
@@ -40,7 +40,10 @@ public class Utility {
 		return scanner.nextFloat();
 	}
 
-	// write anagram logic here
+	/* @param string1
+	 * @param string2
+	 * @logic to find two string are anagram or not
+	 */
 	public static void checkAnagarm(String str1, String str2) {
 
 		boolean status = false;
@@ -48,7 +51,8 @@ public class Utility {
 		int len2 = str2.length();
 		if (len1 != len2) {
 			System.out.println("string are not anagram");
-		} else {
+		} else 
+		{
 			char ch1[] = str1.toCharArray();
 			char ch2[] = str2.toCharArray();
 			// sort array
@@ -63,16 +67,17 @@ public class Utility {
 			System.out.println("No the strings are not anagram");
 		}
 
-	}// m1
-	/*
-	 * prime number
+	}
+	/* @take range (0-1000)
+	 * @logic to find prime number
+	 * 
 	 * 
 	 */
 
 	String primeNumbers = "";
 
 	public void findPrime(int n) {
-		for (int i = 1; i <= n; i++) {
+		for (int i = 0; i <= n; i++) {
 			int counter = 0;
 			for (int num = i; num >= 1; num--) {
 				if (i % num == 0) {
@@ -85,7 +90,7 @@ public class Utility {
 				primeNumbers = primeNumbers + i + " ";
 			}
 		} // out for
-		System.out.println("Prime numbers from 1 to 100 are :");
+		System.out.println("Prime numbers from 1 to 1000 are :");
 		System.out.println(primeNumbers);
 
 	}
