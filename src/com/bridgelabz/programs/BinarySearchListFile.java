@@ -16,17 +16,17 @@ public class BinarySearchListFile {
 			String key;
 			String word = null;
 			Scanner scanner = new Scanner(System.in);
-			File file = new File(
-					"/home/bridgelabz/eclipse-workspace/Algorithm Program/src/com/bridgelabz/programs/Java Files/temp.txt");
+			File file = new File("/home/bridgelabz/eclipse-workspace/Algorithm Programs/temp.txt");
 
-			System.out.println(word.toString());
-			if (file.exists()) {
-				if (file.canRead()) {
+			
+			if (file.exists()) 
+			{
+				if (file.canRead()) 
+				{
 					BufferedReader bufferReader = new BufferedReader(new FileReader(file));
 					word = bufferReader.readLine();
 
-					
-					bufferReader.close();
+					//bufferReader.close();
 					String[] str = word.trim().split(" ");
 
 					utility.bubbleSort2(str);// sort the line with alphabhet
@@ -34,14 +34,18 @@ public class BinarySearchListFile {
 					System.out.println("Enter the Key To search....");
 					key = scanner.nextLine();
 					scanner.close();
-					if (utility.binarySearch(str, key, 0, str.length - 1) > 0) {
+					if (utility.binarySearch(str, key, 0, str.length - 1) > 0)
+					{
 						System.out.println("Element is found......");
-						//bufferReader.close();
-					} else {
+						// bufferReader.close();
+					} else 
+					{
 						System.out.println("Not Found......");
 
 					}
-				} else {
+					
+				} else 
+				{
 					System.out.println("file cant read");
 				}
 			} else
@@ -49,8 +53,8 @@ public class BinarySearchListFile {
 			{
 				System.out.println("file not found");
 			}
-		} catch (Exception e)
-		{
+		} catch (Exception e) {
+		    
 			e.printStackTrace();
 		}
 	}

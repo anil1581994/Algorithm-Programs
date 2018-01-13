@@ -29,7 +29,7 @@ public class MergeSort {
 	{
 		int n=a.length;
 		
-		if(n<2)
+		if(n<2)//subarray size >1
 		return;
 		
 		int mid=n/2;
@@ -40,6 +40,7 @@ public class MergeSort {
 		
 		for(int i=0;i<mid;i++)
 			left[i]=a[i];
+		
 		for(int i=mid;i<n;i++)
 			right[i-mid]=a[i];
 		
@@ -70,13 +71,15 @@ public class MergeSort {
 		
 		while(i<left.length) 
 		{// add the remaining elemnt from left half
-			a[k++]=left[i];
+			a[k]=left[i];
 			i++;
+			k++;
 		}
 		while(j<right.length) 
 		{//add the element of right half
-			a[k++]=right[j];
+			a[k]=right[j];
 			j++;
+			k++;
 		}
 }
 }
