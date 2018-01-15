@@ -53,20 +53,22 @@ public class Utility {
 		int len2 = str2.length();
 		if (len1 != len2) {
 			System.out.println("string are not anagram");
-		} else {
-			char ch1[] = str1.toCharArray();
-			char ch2[] = str2.toCharArray();
-			// sort array
-			Arrays.sort(ch1);
-			Arrays.sort(ch2);
-			status = Arrays.equals(ch1, ch2);
+			return;
+		} 
+		char ch1[] = str1.toCharArray();
+		char ch2[] = str2.toCharArray();
+		// sort array
+		Arrays.sort(ch1);
+		Arrays.sort(ch2);
+		
+		status = Arrays.equals(ch1, ch2);
 
-		}
+		
 		if (status) {
 			System.out.println("yes,strings are anagram");
-		} else {
-			System.out.println("No the strings are not anagram");
-		}
+			return;
+		} 
+		System.out.println("No the strings are not anagram");
 
 	}
 	/*
@@ -79,8 +81,10 @@ public class Utility {
 
 	String primeNumbers = "";
 
-	public void findPrime(int n) {
-		for (int i = 0; i <= n; i++) {
+	public void findPrime(int n)
+	{
+		for (int i = 0; i <= n; i++) 
+		{
 			int counter = 0;
 			for (int num = i; num >= 1; num--) {
 				if (i % num == 0) {
